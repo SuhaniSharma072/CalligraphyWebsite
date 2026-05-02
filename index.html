@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="styles.css"/>
+    <title>Calligraphy Website</title>
+</head>
+<body>
+   <header class="app-header">
+    <h1> Calligraphy Coach</h1>
+    <p class="slogan"> Learn calligraphy by practicing pen control, angles, and mindful strokes and building muscle memory.</p>
+   </header>
+    <main class="app-main">
+        <section class ="camera-panel">
+            <h2> Live Camera</h2>
+            <video id ="camera" autoplay playsinline></video>
+            <canvas id="overlay"></canvas>
+            <div class ="status" id ="status">Waiting for camera...</div>
+        </section>
+
+        <section class="controls-panel">
+            <h2>Practice Mode</h2>
+            <div class="control-group">
+                <label for ="drill-select">Choose a drill:</label>
+                <select id="drill-select">
+                    <option value="upstroke">Upstroke</option>
+                    <option value="downstroke">Downstroke</option>
+                    <option value ="basic-strokes">Basic strokes</option>
+                    <option value ="ovals">Ovals</option>
+                </select>
+            </div>
+
+            <button id="start-session">Start Session</button>
+            <div class="feedback">
+                <h3>Feedback</h3>
+                <p id="angle-feedback">Pen angle: -</p>
+                <p id="pressure-feedback">Pressure: -</p>
+                <p id="temple-feedback">Tempo: -</p>
+            </div>
+            <div class="brush-divider"></div>
+            <div class="stroke-preview">
+            <h3>Stroke Preview</h3>
+            <img id="stroke-image" src="" alt="Stroke preview">
+                </div>
+
+        </section>
+    </main>
+    <script src="index.js"></script>
+
+</body>
+</html>
+
